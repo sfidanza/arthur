@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Démineur</title>
+	<link type="image/png" rel="shortcut icon" href="static/img/mine.png"/>
+	<link type="text/css" rel="stylesheet" href="static/app.css"/>
+	<script type="text/javascript" src="static/app.js"></script>
+</head>
+
+<body>
+<div id="menu-container">
+	<ul>
+		<li><a onclick="game.setLevel(1, this);" class="active">Débutant</a></li>
+		<li><a onclick="game.setLevel(2, this);">Intermédiaire</a></li>
+		<li><a onclick="game.setLevel(3, this);">Expert</a></li>
+	</ul>
+</div>
+<div id="status-container"><div id="status"></div></div>
+<div id="minesweeper-container">
+
+<div id="minesweeper-header">
+	<div id="timer">0</div>
+	<div id="mines">0</div>
+</div>
+
+<table class="minesweeper-table" id="minesweeper-table" onclick="game.click(event.target, board.open.bind(board));" oncontextmenu="game.click(event.target, board.flag.bind(board)); return false;">
+<tbody><tr>
+<td class="minesweeper-unknown" id="minesweeper-0-0"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-0"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-0"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-0"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-0"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-0"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-0"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-0"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-0"></td>
+</tr>
+<tr>
+<td class="minesweeper-unknown" id="minesweeper-0-1"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-1"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-1"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-1"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-1"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-1"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-1"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-1"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-1"></td>
+</tr>
+<tr>
+<td class="minesweeper-unknown" id="minesweeper-0-2"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-2"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-2"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-2"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-2"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-2"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-2"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-2"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-2"></td>
+</tr>
+<tr>
+<td class="minesweeper-unknown" id="minesweeper-0-3"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-3"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-3"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-3"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-3"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-3"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-3"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-3"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-3"></td>
+</tr>
+<tr>
+<td class="minesweeper-unknown" id="minesweeper-0-4"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-4"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-4"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-4"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-4"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-4"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-4"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-4"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-4"></td>
+</tr>
+<tr>
+<td class="minesweeper-unknown" id="minesweeper-0-5"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-5"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-5"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-5"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-5"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-5"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-5"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-5"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-5"></td>
+</tr>
+<tr>
+<td class="minesweeper-unknown" id="minesweeper-0-6"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-6"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-6"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-6"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-6"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-6"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-6"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-6"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-6"></td>
+</tr>
+<tr>
+<td class="minesweeper-unknown" id="minesweeper-0-7"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-7"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-7"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-7"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-7"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-7"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-7"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-7"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-7"></td>
+</tr>
+<tr>
+<td class="minesweeper-unknown" id="minesweeper-0-8"></td>
+<td class="minesweeper-unknown" id="minesweeper-1-8"></td>
+<td class="minesweeper-unknown" id="minesweeper-2-8"></td>
+<td class="minesweeper-unknown" id="minesweeper-3-8"></td>
+<td class="minesweeper-unknown" id="minesweeper-4-8"></td>
+<td class="minesweeper-unknown" id="minesweeper-5-8"></td>
+<td class="minesweeper-unknown" id="minesweeper-6-8"></td>
+<td class="minesweeper-unknown" id="minesweeper-7-8"></td>
+<td class="minesweeper-unknown" id="minesweeper-8-8"></td>
+</tr>
+</tbody></table>
+
+</div>
+</body>
+</html>
