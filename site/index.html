@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<html>
 <head>
+    <meta charset="utf8" />
+	<title>Arthur</title>
+	<link type="text/css" rel="stylesheet" href="site.css"/>
     <script type="text/javascript">
         function select(pageId) {
             var oldEls = document.querySelectorAll('.active');
@@ -9,20 +14,6 @@
             el.classList.add('active');
         }
     </script>
-    <style>
-        body {
-            background-color:green;
-        }
-        .page {
-            display: none;
-        }
-        .page.active {
-            display: block;
-        }
-        nav.button {
-            text-align: right;
-        }
-    </style>
 </head>
 <body>
 <div id="page0" class="page active">
@@ -30,7 +21,7 @@
     <p style="color:lawngreen">moyen</p>
     <p style="color:khaki">difficile</p>
 
-    <p style="color:blue; font-size:23px ">Bienvenue dans votre menu du dossier d'Arthur
+    <p style="color:blue; font-size:23px">Bienvenue dans votre menu du dossier d'Arthur
     </p>
     <p style="color:rgb(0, 255, 76); font-size:55px">What!</p>    
     <p style="color:aqua; font-size: 45px">
@@ -42,6 +33,7 @@
 </div>
 
 <div id="page1" class="page">1
+    <p>La journée commence par </p>
 
     <nav class="button">
         <a onclick="select('page0'); return false;" href="#page0" class="button">&laquo; Précédent</a>
@@ -65,3 +57,4 @@
 </div>
 
 </body>
+</html>

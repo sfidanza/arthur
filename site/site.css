@@ -1,0 +1,12 @@
+body {
+	background-color:green;
+}
+.page {
+	display: none;
+}
+.page.active {
+	display: block;
+}
+nav.button {
+	text-align: right;
+}
