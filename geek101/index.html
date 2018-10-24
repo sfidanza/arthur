@@ -4,8 +4,8 @@
     <meta charset="utf8" />
 	<title>test démineur</title>
 	<link type="text/css" rel="stylesheet" href="app.css"/>
-    <script type="text/javascript">
-    </script>
+    <script type="text/javascript" src="jquery-1113min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
 
@@ -18,12 +18,16 @@
 			Choisis ton niveau :
 			<br />
 			<br />
-			<button class="level_btns">FACILE</button>
+			<button class="level_btns" onclick="init()">FACILE</button>
 			<button class="level_btns">MOYEN</button>
 			<button class="level_btns">DIFFICILE</button>
 
 		</td>
-		<td id="main_container"></td>
+		<td id="main_container">
+			
+			<table id="grid"></table>
+
+		</td>
 	</tr>
 </table>
 			
