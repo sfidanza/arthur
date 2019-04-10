@@ -1,0 +1,98 @@
+html {
+	height: 100%;
+/*	cursor: url(cursor/cursor1.png), pointer;*/
+}
+body {
+	background-color:#262626;
+	color: white;
+}
+#logo {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 250px;
+	height: 250px;
+    background-repeat: no-repeat;
+	background-image: url("images/cio_start.gif");
+	background-position: top left;
+}
+#logo:hover {
+	background-image: url("images/cio.gif");
+}
+a {
+	color: white;
+}
+h3 {
+	text-align: center;
+}
+
+/***[Catalog]************/
+.item img {
+	height: 200px;
+}
+
+/***[Access]************/
+#keypad {
+	width: 366px;
+	text-align: center;
+	margin: auto;
+	font-family: sans-serif;
+}
+#keypad.hidden {
+	display: none;
+}
+#keypad div {
+	float: left;
+	width: 100px;
+	border: 1px solid gray;
+	margin: 10px;
+	padding: 30px 0;
+	background-color: #666666;
+	cursor:pointer;
+	user-select: none;
+}
+#keypad div.action {
+	background-color: #333333;
+}
+#keypad div:hover {
+	border-color: #CCCCCC;
+}
+
+#code {
+	margin: 40px auto;
+	border: 1px solid gray;
+	padding: 20px 30px;
+	width: 150px;
+	font-family: sans-serif;
+	font-size: 150%;
+	letter-spacing: 2rem;
+	user-select: none;
+}
+#granted, #incorrect, #alert {
+	display: none;
+	clear: left;
+	font-family: sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	font-variant: small-caps;
+	padding: 20px 30px;
+	margin: 60px auto;
+	width: 300px;
+	background: black;
+	text-align: center;
+}
+#granted {
+	color: green;
+	border: 3px solid green;
+}
+#incorrect {
+	color: yellow;
+	border: 3px solid yellow;
+}
+#alert {
+	color: red;
+	border: 3px solid red;
+}
+#granted.active, #incorrect.active, #alert.active {
+	display: block;
+}
