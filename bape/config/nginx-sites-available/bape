@@ -3,5 +3,5 @@ server {
 	listen 80;
 	root /var/www/bape;
 	index index.html;
-	server_name www.bape.lan;
+	server_name bape.dagobah-online.com;
 }
