@@ -1,0 +1,7 @@
+# the nginx http server instance, to redirect to https
+server {
+	listen 80;
+	root /var/www/bape;
+	index index.html;
+	server_name www.bape.lan;
+}
