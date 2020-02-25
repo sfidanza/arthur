@@ -44,7 +44,8 @@ access.handleKey = function(key) {
 };
 
 access.validateCode = function() {
-    const validCode = '2580';
+    //choisis ton code entre''
+    const validCode = '1379';
     if (this.code === validCode) {
         this.correctCode();
     } else {

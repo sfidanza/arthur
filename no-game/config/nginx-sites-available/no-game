@@ -1,7 +1,7 @@
 # the nginx http server instance, to redirect to https
 server {
 	listen 80;
-	root /var/www/bape;
+	root /var/www/no-game;
 	index index.html;
-	server_name bape.dagobah-online.com;
+	server_name no-game.dagobah-online.com;
 }
