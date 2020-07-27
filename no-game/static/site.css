@@ -6,17 +6,19 @@ body {
 	color: white;
 }
 #logo {
-
+	display: none;
 	position: absolute;
-	bottom: top;
-	left: 230px;
-	width: 100%;
-	height: 100%;
+	bottom: 0px;
+	right: 0px;
+	width: 600px;
+	height: 600px;
     background-repeat: no-repeat;
-	background-image: url("images/logo.png");
+	background-image: url("images/manette.gif");
 	background-position: top left;
 	}
-
+#logo:hover {
+	background-image: url("images/manette_start.gif");
+}
 a {
 	color: white;
 }
