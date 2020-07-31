@@ -1,0 +1,72 @@
+html,
+body,
+#page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+#menu{   
+    text-align: center;                                        
+    width: 250px;
+    background-color: red;
+    font-size: 22px;
+    color: blue;
+}
+
+.btn_level{
+    width: 200px;
+    background-color: aqua;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 20%;
+}
+#logo{
+    background: url("logo.jpg");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+#main_container{            
+    background: url("font.jpg");
+    background-size: cover;	 	
+}
+#grid{
+    margin: auto;
+}
+#grid td{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border: 4px groove blue;
+}  
+.bomb{
+    background: url("bombe.jpg")center/cover;
+}
+.paint{    
+    background: mediumturquoise !important;
+    font-size: 0px;
+}
+
+.flag{
+    background: url('mix.png') center / cover !important;
+}
+#msgGagne,
+#msgPerdu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 50px;
+    text-align: center;
+    padding: 100;
+    color: white;
+    display: none;
+}
