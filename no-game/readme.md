@@ -22,3 +22,18 @@ Once the updated site has been pushed on the git repository, simply fetch the up
   * `sudo ln -s /etc/nginx/sites-available/no-game /etc/nginx/sites-enabled`
 * Restart nginx
   * `sudo systemctl restart nginx`
+
+### Automatic redeploy on git push
+
+Create a `post-receive` file in the destination server git repository, inside `.git/hooks`. Put the following contents in it:
+
+    #!/bin/sh
+    cd ..
+    GIT_DIR='.git'
+    umask 002 && git reset --hard
+    umask 002 && cp -a no-game/static/. /var/www/no-game/
+
+Make it executable and it will be run by git everytime you push to this remote. Also, set git config to allow resetting the current branch on receive:
+
+    chmod +x .git/hooks/post-receive
+    git config receive.denyCurrentBranch ignore
