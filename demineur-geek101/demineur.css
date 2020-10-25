@@ -19,37 +19,37 @@ table {
 
 .btn_level{
     width: 200px;
-    background-color: aqua;
+    background-color:cyan;
     margin: auto;
     margin-top: 10px;
     cursor: pointer;
     border-radius: 20%;
 }
 #logo{
-    background: url("logo.jpg");
+    background: url("logo.png");
     background-size: cover;
     width: 200px;
     height: 200px;
     margin: auto;
 }
 #main_container{            
-    background: url("font.jpg");
+    background: url("font.png");
     background-size: cover;	 	
 }
 #grid{
     margin: auto;
 }
 #grid td{
-    background-color: red;
+    background-color:red;
     width: 30px;
     height: 30px;
-    border: 4px groove blue;
+    border: 4px groove rgb(0, 0, 0);
 }  
 .bomb{
     background: url("bombe.jpg")center/cover;
 }
 .paint{    
-    background: mediumturquoise !important;
+    background: rgb(255, 255, 255) !important;
     font-size: 0px;
 }
 
