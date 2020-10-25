@@ -1,5 +1,9 @@
 # no-game
 
+## First-time deployment on a server or local
+
+The admin access code in the site is stored in a `.env` file that does not exist by default. Instead, the repository contains a `.env.sample` file that needs to be copied, renamed and edited to set the code expected on this specific environment.
+
 ## Running the code locally in dev mode
 
 In dev mode, the local code will be mapped inside the containers, so you can edit and debug locally:
@@ -27,7 +31,7 @@ This can be automated throug a `post-receive` file in the destination server git
     cd ..
     GIT_DIR='.git'
     umask 002 && git reset --hard
-    umask 002 && docker-compose up -d --build
+    umask 002 && cd no-game && docker-compose -f docker-compose.yml up -d --build
 
 Make it executable and it will be run by git everytime you push to this remote. Also, set git config to allow resetting the current branch on receive:
 
