@@ -5,7 +5,8 @@ import code from "./src/code.js";
 const {
 	MONGO_HOSTNAME,
 	MONGO_PORT,
-	NODE_PORT
+	NODE_PORT,
+	ADMIN_CODE
 } = process.env;
 
 const app = express();
@@ -18,7 +19,7 @@ MongoClient.connect(`mongodb://${MONGO_HOSTNAME}:${MONGO_PORT}`, { useUnifiedTop
 		console.log("Connected to mongodb!");
 		const db = client.db('no-game');
 
-		app.use('/api/code', code(db));
+		app.use('/api/code', code(db, ADMIN_CODE));
 
 		app.listen(NODE_PORT, function () {
 			console.log(`App listening on port ${NODE_PORT}!`);
