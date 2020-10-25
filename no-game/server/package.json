@@ -1,0 +1,20 @@
+{
+  "name": "no-game",
+  "version": "1.0.0",
+  "author": "Stéphane Fidanza <stephane.fidanza@gmail.com>",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node --experimental-json-modules index.js",
+    "debug": "nodemon --inspect=0.0.0.0:9229 --legacy-watch --experimental-json-modules index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT"
+}

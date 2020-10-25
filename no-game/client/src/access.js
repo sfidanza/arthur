@@ -44,17 +44,18 @@ access.handleKey = function(key) {
 };
 
 access.validateCode = function() {
-    //choisis ton code entre''
-    const validCode = '1379';
-    if (this.code === validCode) {
-        this.correctCode();
-    } else {
-        this.wrongCode();
-    }
+    fetch('/api/code?guess=' + this.code)
+    .then(response => response.json())
+    .then(result => {
+        if (result.valid === true) {
+            this.correctCode();
+        } else {
+            this.wrongCode();
+        }
+    });
 };
 
 access.displayCode = function() {
-    console.log('Code: ', this.code);
     let showCode = '*'.repeat(this.code.length);
     document.querySelector("#code").innerHTML = showCode || '&nbsp;';
 };
