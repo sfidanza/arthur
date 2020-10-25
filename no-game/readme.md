@@ -3,10 +3,9 @@
 ## Site Update
 
 Once the updated site has been pushed on the git repository, simply fetch the update and hard reset the local branch:
-```
-git fetch --all
-git reset --hard origin/master
-```
+
+    git fetch --all
+    git reset --hard origin/master
 
 ## Site Deployment
 
