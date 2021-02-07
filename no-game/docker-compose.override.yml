@@ -14,5 +14,12 @@ services:
       - "9229:9229"
     command: npm run debug
 
+  admin:
+    image: mongo-express
+    ports:
+      - 8071:8081
+    depends_on:
+      - mongo
+
 volumes:
   node_modules:

@@ -25,13 +25,6 @@ services:
       - mongodb:/data/db
     expose:
       - 27017
-
-  # admin:
-  #   image: mongo-express
-  #   ports:
-  #     - 8071:8081
-  #   depends_on:
-  #     - mongo
     
 volumes:
   mongodb:
