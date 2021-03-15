@@ -16,7 +16,39 @@ body {
 	background-image: url("images/logo.png");
 	background-position: top left;
 	}
-
+#quiz {
+    display: block;
+	position: absolute;
+	bottom: 0px;
+	left: calc(50% - 350px);
+	width: 700px;
+	height: 155px;
+	cursor: pointer; 
+    background-repeat: no-repeat;
+	background-image: url("images/quiz.png");
+	background-position:bottom;
+	}
+#quiz_logo {
+	display: block;
+	position: static;
+	width: 350px;
+	height: 155px; 
+    background-repeat: no-repeat;
+	background-image: url("images/quiz\ logo.png");
+}
+#contenu {
+	background-color: white;
+	color: black;
+	padding: 1em;
+	margin: 1em;
+	border-radius: 1em;
+}
+#contenu h2 {
+	text-align: center;
+}
+#contenu h3 {
+	text-align: left;
+}
 a {
 	color: white;
 }
