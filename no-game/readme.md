@@ -4,7 +4,7 @@
 
 The admin access code in the site is stored in a `.env` file that does not exist by default. Instead, the repository contains a `.env.sample` file that needs to be copied, renamed and edited to set the code expected on this specific environment.
 
-## Running the code locally in dev mode
+## Run locally in development mode
 
 In dev mode, the local code will be mapped inside the containers, so you can edit and debug locally:
 
@@ -14,8 +14,14 @@ In dev mode, the local code will be mapped inside the containers, so you can edi
 Once the containers are started, the site can be accessed through:
 
 - <http://localhost:8070> to access the web site
+- <http://localhost:8071> to access the DB admin interface
 
-Additionally, you can see the logs of the containers or shell into them directly from VSCode: right-click on the container from the docker extension tab and you will see the options.
+### Run locally in production mode
+
+Here are the commands to start/stop everything (with the containers built locally):
+
+    docker-compose -f "docker-compose.yml" up -d --build
+    docker-compose -f "docker-compose.yml" down
 
 ## Site Update
 
