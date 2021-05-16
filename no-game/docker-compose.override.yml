@@ -4,6 +4,7 @@ services:
     build: ./client
     volumes:
       - ./client/src:/var/www/html
+    restart: no
   
   app:
     build: ./server
@@ -13,6 +14,10 @@ services:
     ports:
       - "9229:9229"
     command: npm run debug
+    restart: no
+
+  mongo:
+    restart: no
 
   admin:
     image: mongo-express
